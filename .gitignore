@@ -1,0 +1,10 @@
+._*
+.DS_Store
+*.sublime-*
+
+# Ignore dependencies using package control
+*.sass-cache
+css/style.css
+css/style.css.map
+node_modules/*
+vendor
