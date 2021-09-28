@@ -271,7 +271,7 @@ module.exports = (grunt) ->
     options =
       encoding: 'utf-8'
     output = '/*!\n'
-    output += '  Theme Name:  <%= pkg.org_agrilife.themename %>\n'
+    output += '  Theme Name:  <%= pkg.org_agrilife.donorwall %>\n'
     output += '  Theme URI:   <%= pkg.repository.url %>\n'
     output += '  Author:      <%= pkg.author %>\n'
     output += '  Author URI:  <%= pkg.org_agrilife.authoruri %>\n'
