@@ -1,9 +1,10 @@
 {
-  "name": "reponame",
+  "name": "donorwall",
   "version": "1.0.0",
   "description": "description",
   "main": "functions.php",
   "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive",
     "start": "composer install && npm install && grunt",
     "checkwp": "npm run configphpcs && npm run checkphp",
     "configphpcs": "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs && vendor/bin/phpcs --config-set ignore_errors_on_exit 1 && vendor/bin/phpcs --config-set ignore_warnings_on_exit 1",
@@ -25,6 +26,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-postcss": "^0.9.0",
     "jquery": "^3.3.1",
+    "node-sass": "^6.0.1",
     "underscore": "^1.9.1",
     "what-input": "^5.1.2"
   },
@@ -38,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agrilife/reponame.git"
+    "url": "git+https://github.com/agrilife/reponame.git"
   },
   "homepage": "https://github.com/agrilife/reponame#readme"
 }
