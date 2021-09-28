@@ -1,0 +1,44 @@
+{
+  "name": "reponame",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "functions.php",
+  "scripts": {
+    "start": "composer install && npm install && grunt",
+    "checkwp": "npm run configphpcs && npm run checkphp",
+    "configphpcs": "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs && vendor/bin/phpcs --config-set ignore_errors_on_exit 1 && vendor/bin/phpcs --config-set ignore_warnings_on_exit 1",
+    "checkphp": "vendor/bin/phpcs --standard=WordPress --report=source ./*.php ./src && vendor/bin/phpcs --standard=WordPress ./*.php ./src"
+  },
+  "author": "Zachary Watkins",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/agrilife/reponame/issues",
+    "email": "first-call@tamu.edu"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "foundation-sites": "^6.x",
+    "grunt": "^1.0.3",
+    "grunt-contrib-coffee": "^2.0.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-postcss": "^0.9.0",
+    "jquery": "^3.3.1",
+    "underscore": "^1.9.1",
+    "what-input": "^5.1.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-jsvalidate": "^0.2.2",
+    "grunt-sass-lint": "^0.2.4"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agrilife/reponame.git"
+  },
+  "homepage": "https://github.com/agrilife/reponame#readme"
+}
