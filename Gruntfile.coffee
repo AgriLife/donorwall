@@ -265,41 +265,7 @@ module.exports = (grunt) ->
       done(err)
       return
     return
-###   @registerTask 'themecomment', 'Add WordPress header to style.css and css/style.css', ->
-    scss = 'css/src/_themecomment.scss'
-    css = 'style.css'
-    options =
-      encoding: 'utf-8'
-    output = '/*!\n'
-    output += '  Theme Name:  <%= pkg.org_agrilife.themename %>\n'
-    output += '  Theme URI:   <%= pkg.repository.url %>\n'
-    output += '  Author:      <%= pkg.author %>\n'
-    output += '  Author URI:  <%= pkg.org_agrilife.authoruri %>\n'
-    output += '  Description: <%= pkg.description %>\n'
-    output += '  Version:     <%= pkg.version %>\n'
-    output += '  License:     <%= pkg.license %>\n'
-    output += '  License URI: <%= pkg.org_agrilife.licenseuri %>\n'
-    output += '  Text Domain: <%= pkg.name %>\n'
-    output += '  Template:    <%= pkg.org_agrilife.template %>\n'
-    output += '*/\n'
-    output = grunt.template.process output
-    grunt.file.delete scss
-    grunt.file.write scss, output, options
-    output += '\n/* ----------------------------------------------------------------------------\n\n'
-    output += '  WordPress requires a style.css file located in the theme\'s root folder for\n'
-    output += '  stuff to work. However, we will not be using vanilla CSS. We\'re using Sass.\n\n'
-    output += '  Sass is a superset of CSS that adds in amazing features such as variables,\n'
-    output += '  nested selectors and loops. It\'s also the easiest way to customize\n'
-    output += '  Foundation. All Sass files are located in the /css/src folder.\n\n'
-    output += '  Please note that none of your scss files will be compiled to /css/style.css\n'
-    output += '  before you run "npm start" or "grunt" or "grunt develop".\n\n'
-    output += '  Please read the README.md file before getting started. More info on how to\n'
-    output += '  use Sass with Foundation can be found here:\n'
-    output += '  http://foundation.zurb.com/docs/sass.html\n\n'
-    output += '---------------------------------------------------------------------------- */'
-    grunt.file.delete css
-    grunt.file.write css, output, options
-    return ###
+
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln filepath + ' has ' + action
