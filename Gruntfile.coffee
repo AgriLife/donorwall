@@ -265,13 +265,13 @@ module.exports = (grunt) ->
       done(err)
       return
     return
-  @registerTask 'themecomment', 'Add WordPress header to style.css and css/style.css', ->
+###   @registerTask 'themecomment', 'Add WordPress header to style.css and css/style.css', ->
     scss = 'css/src/_themecomment.scss'
     css = 'style.css'
     options =
       encoding: 'utf-8'
     output = '/*!\n'
- #   output += '  Theme Name:  <%= pkg.org_agrilife.themename %>\n'
+    output += '  Theme Name:  <%= pkg.org_agrilife.themename %>\n'
     output += '  Theme URI:   <%= pkg.repository.url %>\n'
     output += '  Author:      <%= pkg.author %>\n'
     output += '  Author URI:  <%= pkg.org_agrilife.authoruri %>\n'
@@ -299,7 +299,7 @@ module.exports = (grunt) ->
     output += '---------------------------------------------------------------------------- */'
     grunt.file.delete css
     grunt.file.write css, output, options
-    return
+    return ###
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln filepath + ' has ' + action
