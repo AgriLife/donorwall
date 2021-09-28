@@ -5,7 +5,7 @@ module.exports = (grunt) ->
     watch:
       files: [
         'css/src/**/*.scss',
-        '!css/src/_themecomment.scss',
+ #       '!css/src/_themecomment.scss',
         'package.json'
       ]
       tasks: ['develop']
@@ -60,7 +60,7 @@ module.exports = (grunt) ->
         configFile: '.sass-lint.yml'
       target: [
         'css/**/*.s+(a|c)ss',
-        '!css/src/_themecomment.scss'
+#        '!css/src/_themecomment.scss'
       ]
     compress:
       main:
@@ -116,8 +116,8 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-postcss'
   @loadNpmTasks 'grunt-combine-media-queries'
 
-  @registerTask 'default', ['themecomment', 'sasslint', 'sass:pkg', 'concat:pkg', 'cmq', 'postcss:pkg']
-  @registerTask 'develop', ['themecomment', 'sasslint', 'sass:dev', 'concat:dev', 'postcss:dev']
+  @registerTask 'default', ['sasslint', 'sass:pkg', 'concat:pkg', 'cmq', 'postcss:pkg']
+  @registerTask 'develop', ['sasslint', 'sass:dev', 'concat:dev', 'postcss:dev']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
