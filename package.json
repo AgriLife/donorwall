@@ -20,6 +20,7 @@
     "autoprefixer": "^9.1.5",
     "foundation-sites": "^6.x",
     "grunt": "^1.0.3",
+    "grunt-combine-media-queries": "^1.0.20",
     "grunt-contrib-coffee": "^2.0.0",
     "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-concat": "^1.0.1",
